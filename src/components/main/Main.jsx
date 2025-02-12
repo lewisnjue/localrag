@@ -36,7 +36,7 @@ export const Main = () => {
   return (
     <div className="main">
       <div className="nav">
-        <p>Gemini</p>
+        <p>RAG</p>
         <img src={assets.user_icon} alt="" />
       </div>
       
