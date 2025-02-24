@@ -10,7 +10,7 @@ export const Main = () => {
   const [loading, setLoading] = useState(false);
 
   const sendMessage = async () => {
-    if (!input.trim()) return; // Prevent empty input
+    if (!input.trim()) return;
 
     setLoading(true);
     setResponse(null);
@@ -22,8 +22,7 @@ export const Main = () => {
         body: JSON.stringify({ question: input }),
       });
 
-      const data =  await  res.json()
-      console.log(data)
+      const data = await res.json();
       setResponse(data.answer);
     } catch (error) {
       console.error("Error fetching response:", error);
@@ -31,7 +30,7 @@ export const Main = () => {
     }
 
     setLoading(false);
-    setInput(""); // Clear input after sending
+    setInput("");
   };
 
   return (
@@ -71,7 +70,7 @@ export const Main = () => {
           </div>
         </div>
 
-        {loading && <p className="loading">Processing...</p>}
+        {loading && <Loader />}
 
       </div>
     </div>
