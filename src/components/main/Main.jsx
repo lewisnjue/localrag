@@ -22,7 +22,8 @@ export const Main = () => {
         body: JSON.stringify({ question: input }),
       });
 
-      const data = await res.json();
+      const data =  res
+      console.log(data)
       setResponse(data.answer);
     } catch (error) {
       console.error("Error fetching response:", error);
