@@ -16,7 +16,7 @@ export const Main = () => {
     setResponse(null);
 
     try {
-      const res = await fetch("https://8000-lewisnjue-ragproject-etal1lewozb.ws-eu118.gitpod.io/ask", {
+      const res = await fetch("http://45.79.61.51/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: input }),
