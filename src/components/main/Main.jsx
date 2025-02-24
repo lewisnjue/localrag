@@ -22,7 +22,7 @@ export const Main = () => {
         body: JSON.stringify({ question: input }),
       });
 
-      const data =  res
+      const data =  await  res.json()
       console.log(data)
       setResponse(data.answer);
     } catch (error) {
