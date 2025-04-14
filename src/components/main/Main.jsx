@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import Loader from "../Loader/Loader";
 
 export const Main = () => {
+  // some local state to use 
   const [input, setInput] = useState("");
   const [response, setResponse] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -16,7 +17,7 @@ export const Main = () => {
     setResponse(null);
 
     try {
-      const res = await fetch("https://lewisnjue.duckdns.org/ask", {
+      const res = await fetch("<url_goes_here_>", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: input }),
