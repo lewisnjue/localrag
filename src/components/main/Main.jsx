@@ -17,7 +17,7 @@ export const Main = () => {
     setResponse(null);
 
     try {
-      const res = await fetch("<url_goes_here_>", {
+      const res = await fetch("http://localhost:8000/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: input }),

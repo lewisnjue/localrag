@@ -4,6 +4,11 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  server: {
+    allowedHosts: [
+      '5173-lewisnjue-ragfrontend-kvcd04kulng.ws-eu118.gitpod.io'
+    ]
+  },
   resolve: {
     alias: {
       '@assets': path.resolve(__dirname, 'src/assets'),

@@ -1,0 +1,8 @@
+pinecone
+sentence-transformers
+dotenv
+google-genai
+python-dotenv
+PyPDF2
+fastapi
+pydantic
