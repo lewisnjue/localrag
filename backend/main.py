@@ -41,7 +41,7 @@ async def handle_request(request: Request):
     query_embedding = model.encode(question).tolist()
     results = index.query(
         vector=query_embedding,
-        top_k=10,
+        top_k=100,
         include_metadata=True
     )
 
