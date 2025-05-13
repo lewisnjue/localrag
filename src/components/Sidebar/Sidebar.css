@@ -1,20 +1,28 @@
-.sidebar{
+.sidebar {
   min-height: 100vh;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #f0f4f9;
-  padding: 25px 15px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  animation: slideIn 0.5s ease;
 }
-.sidebar img{
-  width: 20px;
 
+.sidebar img {
+  width: 20px;
 }
-.sidebar .menu{
-  display: block;
-  margin-left: 10px;
+
+.sidebar .menu {
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
+
+.sidebar .menu:hover {
+  transform: rotate(90deg);
+}
+
 .sidebar .new-chart {
   margin-top: 50px;
   display: inline-flex;
@@ -26,41 +34,47 @@
   font-size: 14px;
   color: grey;
   cursor: pointer;
-
 }
 
-.sidebar .recent{
+.sidebar .recent {
   display: flex;
   flex-direction: column;
 }
-.sidebar .recent-title{
+
+.sidebar .recent-title {
   margin-top: 30px;
   margin-bottom: 20px;
-
 }
-.sidebar .recent-entry{
+
+.sidebar .recent-entry {
   display: flex;
-  align-items: start;
+  align-items: center;
   gap: 10px;
   padding: 10px;
-  padding-right: 40px;
-  border-radius: 50px;
-  color: #282828;
-  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
-.sidebar .recent-entry:hover{
-  background-color: #e2e6eb;
-
+.sidebar .recent-entry:hover {
+  background-color: #e9ecef;
 }
-.sidebar .bottom{
+
+.sidebar .bottom {
   display: flex;
   flex-direction: column;
 }
-.sidebar .bottom-item{
-  padding-right: 10px;
-  cursor: pointer;
 
+.sidebar .bottom-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar .bottom-item:hover {
+  background-color: #e9ecef;
 }
 
 .main {
@@ -99,8 +113,6 @@
 
 .main .greet span {
   background-image: linear-gradient(16deg, #4b90ff, #ff5546);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .main .cards {
@@ -186,4 +198,16 @@
   margin: 15px auto;
   text-align: center;
   font-weight: 300;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
