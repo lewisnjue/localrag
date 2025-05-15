@@ -55,7 +55,7 @@ async def handle_request(request: Request):
         model="gemini-2.0-flash",
         contents=f"Question: {question}\nContext: {context_text}",
         config=types.GenerateContentConfig(
-            system_instruction="You are a helpful assistant. Answer the question based on the provided context only. You can use extra knowledge if needed, and if the question is not relevant, respond with 'Sorry, I cannot help you.'"
+            system_instruction="You are a helpful assistant. Answer the question based on the provided context only. You can use extra knowledge if needed, and if the question not in the context you can answer with your knowledge or do research or if not possilbe just respose cant help"
         ),
     )
 
